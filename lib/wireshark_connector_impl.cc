@@ -107,7 +107,8 @@ wireshark_connector_impl::handle_pdu(pmt::pmt_t pdu) {
 		break;
 	}
 
-	case ZIGBEE: {
+	case ZIGBEE:
+	case IEEE802_15_7: {
 
 		d_msg = reinterpret_cast<char*>(std::malloc(
 				len + sizeof(pcap_hdr)));
